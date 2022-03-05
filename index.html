@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMERO MAYOR</title>
+</head>
+
+<body>
+    <h1>José Alejandro Rodríguez Ramírez</h1>
+    <br>
+    <h2>Número mayor utilizando métodos, se pueden ingresar los números manualmente ó generarlos aleatoreamente</h2>
+    <br>
+    <p>package segundosemestre;<br />import java.util.Scanner;<br />import java.util.Random;<br />public class
+        NumMayorMetodos {<br />public static void main(String[] args) {<br />Scanner sc = new
+        Scanner(System.in);<br />int arreglo[][];<br />arreglo= new int
+        [4][4];<br /><br />randomOIngresar(arreglo);<br />System.out.println("--------");<br />desplegar(arreglo);<br />System.out.println("--------");<br />System.out.println("");<br />System.out.println("El
+        n&uacute;mero mayor es: "+ mayor(arreglo));<br />}<br /><br />public static int[][] randomOIngresar(int
+        arreglo[][]){<br />Scanner sc=new Scanner(System.in);<br />System.out.println("&iquest;Qu&eacute;
+        desea?");<br />System.out.println("(1) Ingresar los n&uacute;meros");<br />System.out.println("(2) Generar los
+        n&uacute;meros aleatoreamente");<br />System.out.println("");<br />int resp;<br />resp =
+        sc.nextInt();<br />switch (resp){<br />case 1: <br />for (int i = 0; i &lt; 4; i++) {<br />for (int j = 0; j
+        &lt; 4; j++) {<br />System.out.println("Igrese el n&uacute;mero:
+        ");<br />arreglo[i][j]=sc.nextInt();<br />}<br />}<br />break;<br />case 2:<br />for (int i = 0; i &lt; 4; i++)
+        {<br />for (int j = 0; j &lt; 4; j++) {<br />int limite=1000;<br />Random rand= new
+        Random();<br />arreglo[i][j]=
+        rand.nextInt(limite);<br />}<br />}<br />break;<br />}<br />return(arreglo);<br />}<br /><br />public static
+        void desplegar(int gato[][]){<br />for (int i = 0; i &lt; 4; i++) {<br />for (int j = 0; j &lt; 4; j++)
+        {<br />System.out.print(gato[i][j]+" ");<br />}<br />System.out.println("");<br />}<br />}<br /><br />public
+        static int mayor(int arreglo[][]){<br />int mayor= arreglo[0][0];<br />for (int i = 0; i &lt; 4; i++) {<br />for
+        (int j = 0; j &lt; 4; j++) {<br />if (arreglo[i][j]&gt; mayor) {<br />mayor =
+        arreglo[i][j];<br />}<br />}<br />}<br />return(mayor);<br />}<br />}</p>
+    <br>
+    <h2>Ejemplo: </h2>
+    <img src="img1.png" alt="">
+</body>
+
+</html>
